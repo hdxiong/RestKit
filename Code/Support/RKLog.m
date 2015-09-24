@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import "RKLog.h"
+#import <RestKit/Support/RKLog.h>
 
 @interface RKNSLogLogger : NSObject <RKLogging>
 @end
@@ -28,7 +28,7 @@
   #define RKLOG_CLASS LCLNSLogger_RK
 
 #elif __has_include("DDLog.h")
-  #import "RKLumberjackLogger.h"
+  #import <RestKit/Support/RKLumberjackLogger.h>
   #define RKLOG_CLASS RKLumberjackLogger
 
 #else
