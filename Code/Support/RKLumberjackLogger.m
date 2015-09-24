@@ -7,8 +7,8 @@
 //
 
 #if __has_include("DDLog.h")
-#import <RestKit/Support/RKLumberjackLogger.h>
 #import "DDLog.h"
+#import <RestKit/Support/RKLumberjackLogger.h>
 
 @implementation RKLumberjackLogger
 
