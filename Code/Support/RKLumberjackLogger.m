@@ -6,8 +6,8 @@
 //
 //
 
-#if __has_include("DDLog.h")
-#import "DDLog.h"
+#if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <RestKit/Support/RKLumberjackLogger.h>
 
 @implementation RKLumberjackLogger
@@ -24,7 +24,7 @@
         case RKLogLevelDebug:    return LOG_LEVEL_DEBUG;
         case RKLogLevelTrace:    return LOG_LEVEL_VERBOSE;
     }
-    
+
     return LOG_LEVEL_DEBUG;
 }
 
@@ -40,7 +40,7 @@
         case RKLogLevelDebug:    return LOG_FLAG_DEBUG;
         case RKLogLevelTrace:    return LOG_FLAG_VERBOSE;
     }
-    
+
     return LOG_FLAG_DEBUG;
 }
 
@@ -51,7 +51,7 @@
     if (ddLogLevel & LOG_FLAG_INFO)    return RKLogLevelInfo;
     if (ddLogLevel & LOG_FLAG_WARN)    return RKLogLevelWarning;
     if (ddLogLevel & LOG_FLAG_ERROR)   return RKLogLevelError;
-    
+
     return RKLogLevelOff;
 }
 
